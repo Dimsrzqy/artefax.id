@@ -248,8 +248,8 @@
                             <i class="fa-solid fa-check text-accent"></i> Proyektor & Screen
                         </li>
                     </ul>
-                    <a href="#contact" class="inline-block text-accent font-medium group-hover:text-blue-600">Pesan
-                        Sekarang <i
+                    <a href="pricelist-sewa.html" class="inline-block text-accent font-medium group-hover:text-blue-600">Lihat
+                        Price List <i
                             class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i></a>
                 </div>
 
@@ -278,8 +278,8 @@
                             <i class="fa-solid fa-check text-accent"></i> Video Editing & Motion Graphic
                         </li>
                     </ul>
-                    <a href="#contact" class="inline-block text-accent font-medium group-hover:text-blue-600">Lihat
-                        Portfolio <i
+                    <a href="pricelist-multimedia.html" class="inline-block text-accent font-medium group-hover:text-blue-600">Lihat
+                        Price List <i
                             class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i></a>
                 </div>
             </div>
@@ -363,7 +363,7 @@
                 <!-- Item 1 -->
                 <div class="portfolio-item group relative rounded-xl overflow-hidden aspect-[4/3] bg-slate-200 shadow-sm transition-all duration-300"
                     data-category="dokumentasi-acara" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&q=80&w=800"
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
                         alt="Dokumentasi Acara"
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div
@@ -375,7 +375,7 @@
                 <!-- Item 2 -->
                 <div class="portfolio-item group relative rounded-xl overflow-hidden aspect-[4/3] bg-slate-200 shadow-sm transition-all duration-300"
                     data-category="wedding" data-aos="fade-up" data-aos-delay="300">
-                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=800"
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=800"
                         alt="Wedding"
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div
@@ -387,7 +387,7 @@
                 <!-- Item 3 -->
                 <div class="portfolio-item group relative rounded-xl overflow-hidden aspect-[4/3] bg-slate-200 shadow-sm transition-all duration-300"
                     data-category="penyewaan-alat" data-aos="fade-up" data-aos-delay="400">
-                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=800"
+                    <img src="https://images.unsplash.com/photo-1495707902641-75cac588d2e9?auto=format&fit=crop&q=80&w=800"
                         alt="Penyewaan Alat"
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div
@@ -399,7 +399,7 @@
                 <!-- Item 4 -->
                 <div class="portfolio-item group relative rounded-xl overflow-hidden aspect-[4/3] bg-slate-200 shadow-sm transition-all duration-300"
                     data-category="live-streaming" data-aos="fade-up" data-aos-delay="500">
-                    <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=800"
+                    <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=800"
                         alt="Live Streaming"
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div
@@ -423,7 +423,7 @@
                 <!-- Item 6 -->
                 <div class="portfolio-item group relative rounded-xl overflow-hidden aspect-[4/3] bg-slate-200 shadow-sm transition-all duration-300"
                     data-category="event-organizer" data-aos="fade-up" data-aos-delay="700">
-                    <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&q=80&w=800"
+                    <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&q=80&w=800"
                         alt="Event Organizer"
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div
@@ -435,7 +435,7 @@
             </div>
 
             <div class="text-center mt-12">
-                <a href="#"
+                <a href="portfolio.html" id="view-more-portfolio"
                     class="inline-block bg-white border border-slate-300 hover:border-accent text-slate-700 hover:text-accent px-8 py-3 rounded-full font-medium transition-all duration-300 shadow-sm">Lihat
                     Lebih Banyak</a>
             </div>
@@ -691,6 +691,12 @@
                 btn.classList.add('bg-accent', 'text-white');
 
                 const filterValue = btn.getAttribute('data-filter');
+
+                // Update "Lihat Lebih Banyak" link
+                const viewMoreBtn = document.getElementById('view-more-portfolio');
+                if (viewMoreBtn) {
+                    viewMoreBtn.href = `portfolio.html?filter=${filterValue}`;
+                }
 
                 portfolioItems.forEach(item => {
                     if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {

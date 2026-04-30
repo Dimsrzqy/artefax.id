@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price List Sewa Alat - Artefax.id</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0f172a',    // slate-900
+                        card: '#1e293b',    // slate-800
+                        accent: '#3b82f6',  // blue-500
+                        accentHover: '#2563eb' // blue-600
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass-nav {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6));
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-accent selection:text-white overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 top-4 transition-all duration-300 flex justify-center px-4" id="navbar">
+        <div class="glass-nav rounded-full px-4 py-2 md:px-6 md:py-3 flex items-center justify-between w-full max-w-4xl">
+            <a href="index.html" class="flex items-center gap-2">
+                <img src="img/LOGO ARTEFAX BIRU MIRING.png" alt="Artefax.id" class="h-7 md:h-8 w-auto object-contain max-w-[150px] md:max-w-none">
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+                <a href="index.html#hero" class="text-slate-700 hover:text-accent transition-colors">Beranda</a>
+                <a href="index.html#about" class="text-slate-700 hover:text-accent transition-colors">Tentang</a>
+                <a href="index.html#services" class="text-slate-700 hover:text-accent transition-colors">Layanan</a>
+                <a href="portfolio.html" class="text-slate-700 hover:text-accent transition-colors">Portfolio</a>
+
+                <a href="https://wa.me/6289653521667" target="_blank"
+                    class="bg-accent hover:bg-accentHover text-white px-5 py-2 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg shadow-accent/30 ml-2">Hubungi
+                    Kami</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="flex items-center gap-4 md:hidden">
+                <button class="text-slate-800 focus:outline-none" id="mobile-menu-btn">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="fixed inset-0 bg-white/40 backdrop-blur-md z-[60] hidden flex-col items-center justify-center gap-8 text-xl"
+        id="mobile-menu">
+        <button class="absolute top-6 right-6 w-12 h-12 flex items-center justify-center rounded-full bg-white/50 hover:bg-white/80 text-slate-800 text-2xl shadow-sm transition-all focus:outline-none border border-white/50" id="close-menu-btn">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <a href="index.html#hero" class="text-slate-800 hover:text-accent font-semibold mobile-link">Beranda</a>
+        <a href="index.html#about" class="text-slate-800 hover:text-accent font-semibold mobile-link">Tentang</a>
+        <a href="index.html#services" class="text-slate-800 hover:text-accent font-semibold mobile-link">Layanan</a>
+        <a href="portfolio.html" class="text-slate-800 hover:text-accent font-semibold mobile-link">Portfolio</a>
+        <a href="https://wa.me/6289653521667" target="_blank"
+            class="bg-accent text-white px-8 py-3 rounded-full font-semibold mobile-link">Hubungi Kami</a>
+    </div>
+
+    <!-- Main Content -->
+    <section class="min-h-screen flex items-center justify-center pt-20 px-4">
+        <div class="text-center" data-aos="zoom-in">
+            <div class="w-24 h-24 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-8">
+                <i class="fa-solid fa-camera text-4xl text-accent"></i>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Price List Sewa Alat</h1>
+            <p class="text-xl text-slate-600 mb-10">Fitur ini akan segera ditambahkan</p>
+            <a href="index.html" class="inline-flex items-center gap-2 text-accent font-semibold hover:text-accentHover transition-colors">
+                <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-10 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-slate-500 text-sm">© 2026 Artefax.id. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function toggleMenu() {
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('flex');
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            }
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+        closeMenuBtn.addEventListener('click', toggleMenu);
+    </script>
+</body>
+
+</html>
