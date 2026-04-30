@@ -76,9 +76,11 @@
 
     <!-- Navbar (Dynamic Island & Glass Effect) -->
     <nav class="fixed w-full z-50 top-4 transition-all duration-300 flex justify-center px-4" id="navbar">
-        <div class="glass-nav rounded-full px-4 py-2 md:px-6 md:py-3 flex items-center justify-between w-full max-w-4xl">
+        <div
+            class="glass-nav rounded-full px-4 py-2 md:px-6 md:py-3 flex items-center justify-between w-full max-w-4xl">
             <a href="#" class="flex items-center gap-2">
-                <img src="img/LOGO ARTEFAX BIRU MIRING.png" alt="Artefax.id" class="h-7 md:h-8 w-auto object-contain max-w-[150px] md:max-w-none">
+                <img src="img/LOGO ARTEFAX BIRU MIRING.png" alt="Artefax.id"
+                    class="h-7 md:h-8 w-auto object-contain max-w-[150px] md:max-w-none">
             </a>
 
             <!-- Desktop Menu -->
@@ -88,7 +90,7 @@
                 <a href="#services" class="text-slate-700 hover:text-accent transition-colors">Layanan</a>
                 <a href="#portfolio" class="text-slate-700 hover:text-accent transition-colors">Portfolio</a>
 
-                <a href="#contact"
+                <a href="https://wa.me/6289653521667" target="_blank"
                     class="bg-accent hover:bg-accentHover text-white px-5 py-2 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg shadow-accent/30 ml-2">Hubungi
                     Kami</a>
             </div>
@@ -105,14 +107,17 @@
     <!-- Mobile Menu Overlay -->
     <div class="fixed inset-0 bg-white/40 backdrop-blur-md z-[60] hidden flex-col items-center justify-center gap-8 text-xl"
         id="mobile-menu">
-        <button class="absolute top-6 right-6 w-12 h-12 flex items-center justify-center rounded-full bg-white/50 hover:bg-white/80 text-slate-800 text-2xl shadow-sm transition-all focus:outline-none border border-white/50" id="close-menu-btn">
+        <button
+            class="absolute top-6 right-6 w-12 h-12 flex items-center justify-center rounded-full bg-white/50 hover:bg-white/80 text-slate-800 text-2xl shadow-sm transition-all focus:outline-none border border-white/50"
+            id="close-menu-btn">
             <i class="fa-solid fa-xmark"></i>
         </button>
         <a href="#hero" class="text-slate-800 hover:text-accent font-semibold mobile-link">Beranda</a>
         <a href="#about" class="text-slate-800 hover:text-accent font-semibold mobile-link">Tentang</a>
         <a href="#services" class="text-slate-800 hover:text-accent font-semibold mobile-link">Layanan</a>
         <a href="#portfolio" class="text-slate-800 hover:text-accent font-semibold mobile-link">Portfolio</a>
-        <a href="#contact" class="bg-accent text-white px-8 py-3 rounded-full font-semibold mobile-link">Hubungi
+        <a href="https://wa.me/6289653521667" target="_blank"
+            class="bg-accent text-white px-8 py-3 rounded-full font-semibold mobile-link">Hubungi
             Kami</a>
     </div>
 
@@ -120,7 +125,7 @@
     <section id="hero" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
         <!-- Background elements -->
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069&auto=format&fit=crop"
+            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1920"
                 alt="Event Background" class="w-full h-full object-cover opacity-10">
             <div class="absolute inset-0 bg-gradient-to-t from-slate-50 via-slate-50/80 to-transparent"></div>
             <!-- Glow effect -->
@@ -143,7 +148,7 @@
                 berharga Anda.
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#contact"
+                <a href="https://wa.me/6289653521667" target="_blank"
                     class="w-full sm:w-auto bg-accent hover:bg-accentHover text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-accent/30 flex items-center justify-center gap-2">
                     <i class="fa-brands fa-whatsapp text-lg"></i> Konsultasi Gratis
                 </a>
@@ -161,7 +166,7 @@
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div data-aos="fade-right">
                     <div class="relative rounded-2xl overflow-hidden group shadow-xl">
-                        <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop"
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1000"
                             alt="Tim Artefax"
                             class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
@@ -323,83 +328,108 @@
     <!-- Portfolio / Galeri -->
     <section id="portfolio" class="py-24 bg-slate-100/50 border-y border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
+            <div class="text-center max-w-3xl mx-auto mb-8" data-aos="fade-up">
                 <h2 class="text-accent font-semibold tracking-wider uppercase text-sm mb-2">Portfolio Kami</h2>
                 <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Karya & Dokumentasi</h3>
                 <p class="text-slate-600">Beberapa momen yang telah kami abadikan dengan profesional.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Portfolio Filters -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12" data-aos="fade-up" data-aos-delay="100">
+                <button
+                    class="filter-btn active bg-accent text-white px-5 py-2 rounded-full text-sm font-medium transition-all shadow-sm hover:shadow-md"
+                    data-filter="all">Semua</button>
+                <button
+                    class="filter-btn bg-white text-slate-600 hover:bg-slate-50 border border-slate-200 px-5 py-2 rounded-full text-sm font-medium transition-all shadow-sm hover:shadow-md"
+                    data-filter="wedding">Wedding</button>
+                <button
+                    class="filter-btn bg-white text-slate-600 hover:bg-slate-50 border border-slate-200 px-5 py-2 rounded-full text-sm font-medium transition-all shadow-sm hover:shadow-md"
+                    data-filter="event-organizer">Event Organizer</button>
+                <button
+                    class="filter-btn bg-white text-slate-600 hover:bg-slate-50 border border-slate-200 px-5 py-2 rounded-full text-sm font-medium transition-all shadow-sm hover:shadow-md"
+                    data-filter="live-streaming">Live Streaming</button>
+                <button
+                    class="filter-btn bg-white text-slate-600 hover:bg-slate-50 border border-slate-200 px-5 py-2 rounded-full text-sm font-medium transition-all shadow-sm hover:shadow-md"
+                    data-filter="foto-wisuda">Foto Wisuda</button>
+                <button
+                    class="filter-btn bg-white text-slate-600 hover:bg-slate-50 border border-slate-200 px-5 py-2 rounded-full text-sm font-medium transition-all shadow-sm hover:shadow-md"
+                    data-filter="penyewaan-alat">Penyewaan Alat</button>
+                <button
+                    class="filter-btn bg-white text-slate-600 hover:bg-slate-50 border border-slate-200 px-5 py-2 rounded-full text-sm font-medium transition-all shadow-sm hover:shadow-md"
+                    data-filter="dokumentasi-acara">Dokumentasi Acara</button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid">
                 <!-- Item 1 -->
-                <div class="group relative rounded-xl overflow-hidden aspect-[4/3] bg-slate-200 shadow-sm"
-                    data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1540039155733-d74ef046c8b5?q=80&w=1974&auto=format&fit=crop"
-                        alt="Concert Event"
+                <div class="portfolio-item group relative rounded-xl overflow-hidden aspect-[4/3] bg-slate-200 shadow-sm transition-all duration-300"
+                    data-category="dokumentasi-acara" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&q=80&w=800"
+                        alt="Dokumentasi Acara"
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                         <h4 class="text-white font-bold text-xl">Konser Musik Lokal</h4>
-                        <p class="text-accent text-sm">Dokumentasi Video & Foto</p>
+                        <p class="text-accent text-sm">Dokumentasi Acara</p>
                     </div>
                 </div>
                 <!-- Item 2 -->
-                <div class="group relative rounded-xl overflow-hidden aspect-[4/3] bg-slate-200 shadow-sm"
-                    data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2070&auto=format&fit=crop"
-                        alt="Wedding Event"
+                <div class="portfolio-item group relative rounded-xl overflow-hidden aspect-[4/3] bg-slate-200 shadow-sm transition-all duration-300"
+                    data-category="wedding" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=800"
+                        alt="Wedding"
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                         <h4 class="text-white font-bold text-xl">Wedding Cinematic</h4>
-                        <p class="text-accent text-sm">Jasa Multimedia</p>
+                        <p class="text-accent text-sm">Wedding</p>
                     </div>
                 </div>
                 <!-- Item 3 -->
-                <div class="group relative rounded-xl overflow-hidden aspect-[4/3] bg-slate-200 shadow-sm"
-                    data-aos="fade-up" data-aos-delay="300">
-                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=2000&auto=format&fit=crop"
-                        alt="Camera Gear"
+                <div class="portfolio-item group relative rounded-xl overflow-hidden aspect-[4/3] bg-slate-200 shadow-sm transition-all duration-300"
+                    data-category="penyewaan-alat" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=800"
+                        alt="Penyewaan Alat"
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                         <h4 class="text-white font-bold text-xl">Peralatan Premium</h4>
-                        <p class="text-accent text-sm">Sewa Alat</p>
+                        <p class="text-accent text-sm">Penyewaan Alat</p>
                     </div>
                 </div>
                 <!-- Item 4 -->
-                <div class="group relative rounded-xl overflow-hidden aspect-[4/3] bg-slate-200 shadow-sm"
-                    data-aos="fade-up" data-aos-delay="400">
-                    <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=2000&auto=format&fit=crop"
-                        alt="Corporate Seminar"
+                <div class="portfolio-item group relative rounded-xl overflow-hidden aspect-[4/3] bg-slate-200 shadow-sm transition-all duration-300"
+                    data-category="live-streaming" data-aos="fade-up" data-aos-delay="500">
+                    <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=800"
+                        alt="Live Streaming"
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                         <h4 class="text-white font-bold text-xl">Seminar Perusahaan</h4>
-                        <p class="text-accent text-sm">Live Streaming & Sound</p>
+                        <p class="text-accent text-sm">Live Streaming</p>
                     </div>
                 </div>
                 <!-- Item 5 -->
-                <div class="group relative rounded-xl overflow-hidden aspect-[4/3] bg-slate-200 shadow-sm"
-                    data-aos="fade-up" data-aos-delay="500">
-                    <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop"
-                        alt="Product Photography"
+                <div class="portfolio-item group relative rounded-xl overflow-hidden aspect-[4/3] bg-slate-200 shadow-sm transition-all duration-300"
+                    data-category="foto-wisuda" data-aos="fade-up" data-aos-delay="600">
+                    <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&q=80&w=800"
+                        alt="Foto Wisuda"
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                        <h4 class="text-white font-bold text-xl">Katalog Produk UMKM</h4>
-                        <p class="text-accent text-sm">Fotografi</p>
+                        <h4 class="text-white font-bold text-xl">Momen Kelulusan</h4>
+                        <p class="text-accent text-sm">Foto Wisuda</p>
                     </div>
                 </div>
                 <!-- Item 6 -->
-                <div class="group relative rounded-xl overflow-hidden aspect-[4/3] bg-slate-200 shadow-sm"
-                    data-aos="fade-up" data-aos-delay="600">
-                    <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=2070&auto=format&fit=crop"
-                        alt="Video Editing"
+                <div class="portfolio-item group relative rounded-xl overflow-hidden aspect-[4/3] bg-slate-200 shadow-sm transition-all duration-300"
+                    data-category="event-organizer" data-aos="fade-up" data-aos-delay="700">
+                    <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&q=80&w=800"
+                        alt="Event Organizer"
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                        <h4 class="text-white font-bold text-xl">Post-Production</h4>
-                        <p class="text-accent text-sm">Video Editing</p>
+                        <h4 class="text-white font-bold text-xl">Festival Tahunan</h4>
+                        <p class="text-accent text-sm">Event Organizer</p>
                     </div>
                 </div>
             </div>
@@ -511,7 +541,7 @@
                 </h2>
                 <p class="text-lg text-slate-700 mb-10 max-w-2xl mx-auto relative z-10">Hubungi tim kami sekarang untuk
                     berdiskusi tentang kebutuhan multimedia Anda. Dapatkan penawaran terbaik dari Artefax.id!</p>
-                <a href="#contact"
+                <a href="https://wa.me/6289653521667" target="_blank"
                     class="inline-block bg-accent hover:bg-accentHover text-white px-10 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-[0_0_15px_rgba(59,130,246,0.3)] relative z-10">
                     Hubungi Kami Sekarang <i class="fa-solid fa-paper-plane ml-2"></i>
                 </a>
@@ -578,8 +608,8 @@
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="fa-brands fa-whatsapp text-accent"></i>
-                            <a href="https://wa.me/6281234567890" target="_blank"
-                                class="text-slate-600 hover:text-accent transition-colors">+62 812-3456-7890</a>
+                            <a href="https://wa.me/6289653521667" target="_blank"
+                                class="text-slate-600 hover:text-accent transition-colors">+62 896-5352-1667</a>
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="fa-solid fa-envelope text-accent"></i>
@@ -644,6 +674,40 @@
                 navbar.classList.add('top-4');
                 navbar.classList.remove('top-2');
             }
+        });
+
+        // Portfolio Filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button styling
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-accent', 'text-white');
+                    b.classList.add('bg-white', 'text-slate-600');
+                });
+                btn.classList.remove('bg-white', 'text-slate-600');
+                btn.classList.add('bg-accent', 'text-white');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.95)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
         });
     </script>
 </body>
