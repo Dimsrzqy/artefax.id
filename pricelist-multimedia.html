@@ -14,8 +14,8 @@
                     colors: {
                         dark: '#0f172a',    // slate-900
                         card: '#1e293b',    // slate-800
-                        accent: '#3b82f6',  // blue-500
-                        accentHover: '#2563eb' // blue-600
+                        accent: '#00aade',  // Artefax Blue
+                        accentHover: '#0e6176' // Artefax Dark Blue
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -42,6 +42,36 @@
             border: 1px solid rgba(255, 255, 255, 0.8);
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
         }
+
+        @keyframes bounce-slow {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .animate-bounce-slow {
+            animation: bounce-slow 2s infinite ease-in-out;
+        }
+
+        /* Custom Scrollbar for PDF Frame */
+        .pdf-frame::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .pdf-frame::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        .pdf-frame::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 3px;
+        }
     </style>
 </head>
 
@@ -49,9 +79,11 @@
 
     <!-- Navbar -->
     <nav class="fixed w-full z-50 top-4 transition-all duration-300 flex justify-center px-4" id="navbar">
-        <div class="glass-nav rounded-full px-4 py-2 md:px-6 md:py-3 flex items-center justify-between w-full max-w-4xl">
+        <div
+            class="glass-nav rounded-full px-4 py-2 md:px-6 md:py-3 flex items-center justify-between w-full max-w-4xl">
             <a href="index.html" class="flex items-center gap-2">
-                <img src="img/LOGO ARTEFAX BIRU MIRING.png" alt="Artefax.id" class="h-7 md:h-8 w-auto object-contain max-w-[150px] md:max-w-none">
+                <img src="img/LOGO ARTEFAX BIRU MIRING.png" alt="Artefax.id"
+                    class="h-7 md:h-8 w-auto object-contain max-w-[150px] md:max-w-none">
             </a>
 
             <!-- Desktop Menu -->
@@ -78,7 +110,9 @@
     <!-- Mobile Menu Overlay -->
     <div class="fixed inset-0 bg-white/40 backdrop-blur-md z-[60] hidden flex-col items-center justify-center gap-8 text-xl"
         id="mobile-menu">
-        <button class="absolute top-6 right-6 w-12 h-12 flex items-center justify-center rounded-full bg-white/50 hover:bg-white/80 text-slate-800 text-2xl shadow-sm transition-all focus:outline-none border border-white/50" id="close-menu-btn">
+        <button
+            class="absolute top-6 right-6 w-12 h-12 flex items-center justify-center rounded-full bg-white/50 hover:bg-white/80 text-slate-800 text-2xl shadow-sm transition-all focus:outline-none border border-white/50"
+            id="close-menu-btn">
             <i class="fa-solid fa-xmark"></i>
         </button>
         <a href="index.html#hero" class="text-slate-800 hover:text-accent font-semibold mobile-link">Beranda</a>
@@ -90,16 +124,120 @@
     </div>
 
     <!-- Main Content -->
-    <section class="min-h-screen flex items-center justify-center pt-20 px-4">
-        <div class="text-center" data-aos="zoom-in">
-            <div class="w-24 h-24 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-8">
-                <i class="fa-solid fa-clock-rotate-left text-4xl text-accent"></i>
+    <section class="relative pt-32 pb-24 px-4 overflow-hidden min-h-screen flex flex-col">
+        <!-- Dynamic Background Elements -->
+        <div class="absolute inset-0 z-0 pointer-events-none">
+            <div class="absolute top-1/4 -left-20 w-96 h-96 bg-accent/5 rounded-full blur-[120px] animate-pulse"></div>
+            <div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-blue-200/20 rounded-full blur-[120px] animate-pulse"
+                style="animation-delay: 2s;"></div>
+        </div>
+
+        <div class="relative z-10 max-w-6xl mx-auto w-full flex-grow flex flex-col">
+            <!-- Header Section -->
+            <div class="text-center mb-12" data-aos="fade-up">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-semibold mb-6">
+                    <span class="relative flex h-2 w-2">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+                    </span>
+                    Update April 2026
+                </div>
+                <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight">
+                    Price List <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-blue-600">Multimedia</span>
+                </h1>
+                <p class="text-slate-600 text-lg max-w-2xl mx-auto">
+                    Transparansi harga untuk kualitas mahakarya. Temukan paket terbaik yang sesuai dengan kebutuhan
+                    event Anda.
+                </p>
             </div>
-            <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Price List Multimedia</h1>
-            <p class="text-xl text-slate-600 mb-10">Fitur ini akan segera ditambahkan</p>
-            <a href="index.html" class="inline-flex items-center gap-2 text-accent font-semibold hover:text-accentHover transition-colors">
-                <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
-            </a>
+
+            <!-- PDF Viewer with Premium Frame -->
+            <div class="relative group" data-aos="zoom-in" data-aos-delay="100">
+                <!-- Decorative glow -->
+                <div
+                    class="absolute -inset-1 bg-gradient-to-r from-accent/20 to-blue-500/20 rounded-[2rem] blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200">
+                </div>
+
+                <div
+                    class="relative bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-200/60 flex flex-col">
+                    <!-- Window Header (Mac-style) -->
+                    <div
+                        class="bg-slate-50/80 backdrop-blur-md border-b border-slate-200 px-4 py-3 flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <div class="flex gap-1.5">
+                                <div class="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
+                                <div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
+                                <div class="w-3 h-3 rounded-full bg-[#27c93f]"></div>
+                            </div>
+                            <div
+                                class="ml-4 px-3 py-1 rounded bg-slate-200/50 text-[10px] md:text-xs font-medium text-slate-500 flex items-center gap-2">
+                                <i class="fa-solid fa-lock text-[8px]"></i> pricelist-multimedia-2026.pdf
+                            </div>
+                        </div>
+                        <div class="hidden md:flex items-center gap-4 text-slate-400">
+                            <i
+                                class="fa-solid fa-magnifying-glass-plus hover:text-accent cursor-pointer transition-colors"></i>
+                            <i
+                                class="fa-solid fa-magnifying-glass-minus hover:text-accent cursor-pointer transition-colors"></i>
+                            <div class="h-4 w-[1px] bg-slate-300"></div>
+                            <a href="pricelist multimedia/PRICELIST CV.ARTEFAX_ID_20260401_122350_0000.pdf" download
+                                class="hover:text-accent transition-colors">
+                                <i class="fa-solid fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PDF Content -->
+                    <div class="w-full bg-slate-800 h-[600px] md:h-[850px] relative">
+                        <iframe src="pricelist multimedia/PRICELIST CV.ARTEFAX_ID_20260401_122350_0000.pdf#toolbar=0"
+                            class="w-full h-full" frameborder="0"></iframe>
+
+                        <!-- Mobile Overlay Hint (Only visible if needed) -->
+                        <div class="absolute bottom-4 right-4 md:hidden">
+                            <div
+                                class="bg-slate-900/80 backdrop-blur-md text-white px-4 py-2 rounded-full text-xs flex items-center gap-2">
+                                <i class="fa-solid fa-up-right-from-square"></i> Scroll untuk melihat
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6" data-aos="fade-up"
+                data-aos-delay="200">
+                <a href="pricelist multimedia/PRICELIST CV.ARTEFAX_ID_20260401_122350_0000.pdf" download
+                    class="group relative inline-flex items-center gap-3 bg-accent text-white px-10 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:bg-accentHover hover:shadow-xl hover:shadow-accent/30 overflow-hidden">
+                    <span class="relative z-10 flex items-center gap-2">
+                        <i class="fa-solid fa-cloud-arrow-down animate-bounce-slow"></i> Simpan File PDF
+                    </span>
+                    <div
+                        class="absolute inset-0 bg-white/20 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    </div>
+                </a>
+
+                <a href="index.html"
+                    class="flex items-center gap-2 text-slate-500 hover:text-accent font-semibold transition-all hover:gap-3">
+                    <i class="fa-solid fa-house-chimney"></i> Kembali ke Beranda
+                </a>
+            </div>
+
+            <!-- Trust Badge -->
+            <div class="mt-16 pt-8 border-t border-slate-200 flex flex-wrap justify-center items-center gap-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-500"
+                data-aos="fade-up">
+                <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Dipercaya oleh:</span>
+                <div class="flex gap-8">
+                    <img src="https://ui-avatars.com/api/?name=EO&background=cbd5e1&color=fff" class="h-6 opacity-80"
+                        alt="Partner">
+                    <img src="https://ui-avatars.com/api/?name=UNIV&background=cbd5e1&color=fff" class="h-6 opacity-80"
+                        alt="Partner">
+                    <img src="https://ui-avatars.com/api/?name=CORP&background=cbd5e1&color=fff" class="h-6 opacity-80"
+                        alt="Partner">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -114,7 +252,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
-        
+
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const closeMenuBtn = document.getElementById('close-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
