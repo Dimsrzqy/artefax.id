@@ -42,6 +42,14 @@
             border: 1px solid rgba(255, 255, 255, 0.8);
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
         }
+        .animate-bounce-slow {
+            animation: bounce-slow 2s infinite ease-in-out;
+        }
+
+        @keyframes bounce-slow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
     </style>
 </head>
 
@@ -90,17 +98,30 @@
     </div>
 
     <!-- Main Content -->
-    <section class="min-h-screen flex items-center justify-center pt-20 px-4">
-        <div class="text-center" data-aos="zoom-in">
-            <div class="w-24 h-24 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-8">
-                <i class="fa-solid fa-camera text-4xl text-accent"></i>
+    <section class="min-h-screen flex items-center justify-center pt-20 px-4 relative overflow-hidden">
+        <!-- Dynamic Background Elements -->
+        <div class="absolute inset-0 z-0 pointer-events-none">
+            <div class="absolute top-1/4 -left-20 w-96 h-96 bg-accent/5 rounded-full blur-[120px] animate-pulse"></div>
+            <div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-blue-200/20 rounded-full blur-[120px] animate-pulse"
+                style="animation-delay: 2s;"></div>
+        </div>
+
+        <div class="text-center relative z-10" data-aos="zoom-in">
+            <div class="w-24 h-24 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-8 animate-bounce-slow">
+                <i class="fa-solid fa-camera-retro text-4xl text-accent"></i>
             </div>
-            <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Price List Sewa Alat</h1>
-            <p class="text-xl text-slate-600 mb-10">Fitur ini akan segera ditambahkan</p>
-            <a href="index.html"
-                class="flex items-center justify-center gap-2 text-slate-500 hover:text-accent font-semibold transition-all hover:gap-3">
-                <i class="fa-solid fa-house-chimney"></i> Kembali ke Beranda
-            </a>
+            <h1 class="text-4xl md:text-6xl font-bold text-slate-900 mb-6 tracking-tight">
+                Price List <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-blue-600">Sewa Alat</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-600 mb-10 max-w-lg mx-auto leading-relaxed">
+                Price list sewa alat akan segera ditambah
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <a href="index.html"
+                    class="flex items-center justify-center gap-2 text-slate-500 hover:text-accent font-semibold transition-all hover:gap-3">
+                    <i class="fa-solid fa-house-chimney"></i> Kembali ke Beranda
+                </a>
+            </div>
         </div>
     </section>
 
